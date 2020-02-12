@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title>Product Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+  <h2>Product Form</h2>
+  <div class="card bg-light">
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input class="form-control" 
+            type="text" 
+            id="name" 
+            name="name"
+            placeholder="Enter name" 
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea class="form-control" 
+            rows="3" 
+            placeholder="Enter description"
+            id="description"
+            name="description"
+          ></textarea>
+        </div>
+  
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input class="form-control" 
+            type="text" 
+            id="price" 
+            name="price"
+            placeholder="Enter price" 
+          />
+        </div>
+  
+        <div class="form-group form-check">
+          <input type="checkbox" id="isAvailable" name="isAvailable" class="form-check-input" />
+          <label for="isAvailable" class="form-check-label">Available?</label>
+        </div>
+  
+        <button type="button" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
+<!-- 
+  1. Name - text box 
+  2. Description - text area
+  3. Price - text box
+  4. Available? - checkbox
+  5. Save - button
+-->
