@@ -1,0 +1,73 @@
+Understanding the Angular CLI Workspace File
+- https://nitayneeman.com/posts/understanding-the-angular-cli-workspace-file/
+
+Tree Shakeable Providers and Services in Angular
+- https://coryrylan.com/blog/tree-shakeable-providers-and-services-in-angular
+
+Flaw: Constructor does Real Work
+- http://misko.hevery.com/code-reviewers-guide/flaw-constructor-does-real-work/
+
+Lifecycle Hooks
+- https://angular.io/guide/lifecycle-hooks
+
+The Angular Library Series - Creating a Library with Angular CLI
+
+Post: 
+  1. https://blog.angularindepth.com/creating-a-library-in-angular-6-87799552e7e5
+  2. https://blog.angularindepth.com/creating-a-library-in-angular-6-part-2-6e2bc1e14121
+  3. https://blog.angularindepth.com/the-angular-library-series-publishing-ce24bb673275
+  
+GitHub: https://github.com/t-palmer/example-ng6-lib
+
+Global Error Handling with Angular2+
+- https://medium.com/@amcdnl/global-error-handling-with-angular2-6b992bdfb59c
+
+Git Setup
+- https://git-scm.com/downloads
+
+Angular 2 / 4 / 5 not working in IE11
+- https://stackoverflow.com/questions/35140718/angular-2-4-5-not-working-in-ie11
+
+Testing HttpClient
+- https://alligator.io/angular/testing-httpclient/
+- https://medium.com/netscape/testing-with-the-angular-httpclient-api-648203820712
+- https://www.ng-conf.org/2019/angulars-httpclient-testing-depth/
+
+Introduction to Webpack (JavaScript Meetup Youtube Channel)
+- https://youtu.be/fCw98k3QQ90
+
+Angular Modularity
+- https://youtu.be/sDC3QwuwQH0
+
+How to configure Webpack 4 with Angular 7: a complete guide
+- https://medium.freecodecamp.org/how-to-configure-webpack-4-with-angular-7-a-complete-guide-9a23c879f471
+
+REST API in Java
+- https://www.journaldev.com/9170/restful-web-services-tutorial-java
+- https://www.tutorialspoint.com/restful/restful_first_application.htm
+
+Angular PDF Node modules
+- https://www.npmjs.com/package/pdf-puppeteer
+- https://www.npmjs.com/package/angular-pdf
+
+Dynamic forms in Angular
+- https://angular.io/guide/dynamic-form
+
+Using Sequelize with Node.js
+- https://www.codementor.io/mirko0/how-to-use-sequelize-with-node-and-express-i24l67cuz
+
+Angular Bootstrap
+1. ng-bootstrap
+- https://ng-bootstrap.github.io/#/home
+- Latest version - 4.1.3
+- Weekly downloads - 196,437
+
+2. ngx-bootstrap
+- https://valor-software.com/ngx-bootstrap/#/
+- Latest version - 4.2.0
+- Weekly downloads - 139,682
+
+Miscellaneous
+- https://github.com/sinisterchipmunk/node.rb
+- http://www.nikola-breznjak.com/blog/javascript/nodejs/how-to-run-node-js-server-in-ionic-mobile-app/
+- https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
