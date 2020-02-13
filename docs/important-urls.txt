@@ -71,3 +71,10 @@ Miscellaneous
 - https://github.com/sinisterchipmunk/node.rb
 - http://www.nikola-breznjak.com/blog/javascript/nodejs/how-to-run-node-js-server-in-ionic-mobile-app/
 - https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
+
+Change Detection
+- https://youtu.be/DsBy9O0c6eo
+- https://youtu.be/XTNL4WJRCrM
+- https://youtu.be/Ol6dFGs0Wxo
+- https://blog.angular-university.io/how-does-angular-2-change-detection-really-work/
+
