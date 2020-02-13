@@ -1,61 +1,10 @@
 <div class="row">
   <div class="col-4">
-    <h3>Product Form</h3>
-    <div class="card bg-light">
-      <div class="card-body">
-        <form>
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input class="form-control" type="text" id="name" name="name" placeholder="Enter name"
-              [(ngModel)]="product.name" />
-          </div>
-
-          <div class="form-group">
-            <label for="description">Description</label>
-            <textarea class="form-control" rows="3" placeholder="Enter description" id="description" name="description"
-              [(ngModel)]="product.description"></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="price">Price</label>
-            <input class="form-control" type="text" id="price" name="price" placeholder="Enter price"
-              [(ngModel)]="product.price" />
-          </div>
-
-          <div class="form-group form-check">
-            <input type="checkbox" id="isAvailable" name="isAvailable" class="form-check-input" value="true"
-              [(ngModel)]="product.isAvailable" />
-            <label for="isAvailable" class="form-check-label">Available?</label>
-          </div>
-
-          <button type="button" class="btn btn-primary" (click)="onSave()">Submit</button>
-        </form>
-      </div>
-    </div>
-
-    <div class="alert alert-info mt-3" *ngIf="showMessage">
-      Product created successfully.
-    </div>
-
+    <app-product-form (productCreated)="onProductCreated($event)"></app-product-form>
   </div>
 
   <div class="col">
     <h3>Products</h3>
-
-    <div class="card bg-light m-3" *ngFor="let product of products">
-      <h4 class="card-header">{{ product.name | uppercase }}</h4>
-      <div class="card-body">
-        <p class="card-text" [ngStyle]="{ color: product.isAvailable ? 'blue' : 'red'}">{{ product.description }}</p>
-        <p class="card-text"><strong>Price:</strong> <em>{{ product.price | currency : 'INR' : 'code' }}</em></p>
-        <p class="card-text"><strong>Available?</strong> <em class="badge"
-            [ngClass]="applyBadge(product)">{{ product.isAvailable ? 'Yes' : 'No' }}</em>
-        </p>
-      </div>
-      <div class="card-footer">
-        <button type="button" class="btn btn-warning btn-sm">
-          Delete
-        </button>
-      </div>
-    </div>
+    <app-product-detail [product]="p" *ngFor="let p of products"></app-product-detail>
   </div>
 </div>
