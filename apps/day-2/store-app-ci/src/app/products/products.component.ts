@@ -50,14 +50,6 @@ export class ProductsComponent implements OnInit {
     this.product = new Product();
     this.showMessage = true;
 
-    // const self = this;
-
-    // setTimeout(function () {
-    //   self.showMessage = false;
-    //   console.log('Timeout callback invoked.');
-    //   console.log('callback - ', this);
-    // }, 4000);
-
     setTimeout(() => {
       this.showMessage = false;
     }, 4000);
