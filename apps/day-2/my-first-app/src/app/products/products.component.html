@@ -1,1 +1,18 @@
-<p>products works!</p>
+<h3>Products</h3>
+<div>
+  Name: {{ productName }}
+</div>
+<div>
+  Price: {{ productPrice }}
+</div>
+<hr>
+<div>
+  Name: <input type="text" [(ngModel)]="productName" />
+</div>
+<div>
+  <button (click)="onSave()" class="btn btn-success">Save</button>
+</div>
+<hr>
+Search: <input type="text" (input)="onChange($event)" />
+<hr>
+{{ productName }} costs Rs. {{ productPrice }}

@@ -1,1 +1,17 @@
-<p>products works!</p>
+<h3>Products</h3>
+
+<div class="card bg-light m-3" *ngFor="let product of products">
+  <h4 class="card-header">{{ product.name | uppercase }}</h4>
+  <div class="card-body">
+    <p class="card-text" [ngStyle]="{ color: product.isAvailable ? 'blue' : 'red'}">{{ product.description }}</p>
+    <p class="card-text"><strong>Price:</strong> <em>{{ product.price | currency : 'INR' : 'code' }}</em></p>
+    <p class="card-text"><strong>Available?</strong> <em class="badge"
+        [ngClass]="applyBadge(product)">{{ product.isAvailable ? 'Yes' : 'No' }}</em>
+    </p>
+  </div>
+  <div class="card-footer">
+    <button type="button" class="btn btn-warning btn-sm">
+      Delete
+    </button>
+  </div>
+</div>
