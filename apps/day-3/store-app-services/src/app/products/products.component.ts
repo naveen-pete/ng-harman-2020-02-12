@@ -6,20 +6,23 @@ import { Product } from '../models/product';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
   products: Product[] = [];
+  // productsService: ProductsService;
 
-  constructor() {
-    const service = new ProductsService();
-    this.products = service.getProducts();
+  constructor(private productsService: ProductsService) {
+    console.log('ProductsComponent constructor invoked.');
+    // this.productsService = productsService;
   }
 
   ngOnInit(): void {
+    console.log('ProductsComponent ngOnInit invoked.');
+    this.products = this.productsService.getProducts();
   }
 
-  onProductCreated(newProduct: Product) {
-    this.products.unshift(newProduct);
-  }
+  // onProductCreated(newProduct: Product) {
+  //   this.products.unshift(newProduct);
+  // }
 }

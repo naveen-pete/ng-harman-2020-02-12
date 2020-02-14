@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Product } from '../models/product';
+import { LoggerService } from './logger.service';
 
 @Injectable()
 export class ProductsService {
@@ -28,14 +29,15 @@ export class ProductsService {
     }
   ];
 
-  constructor() { }
+  constructor(private loggerService: LoggerService) { }
 
   getProducts() {
+    this.loggerService.log('Getting products..');
     return this.products;
   }
 
   addProduct(product: Product) {
-    this.products.push(product);
+    this.products.unshift(product);
   }
 
 }

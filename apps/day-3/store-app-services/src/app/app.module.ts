@@ -8,6 +8,9 @@ import { ProductsComponent } from './products/products.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 
+import { ProductsService } from './services/products.service';
+import { LoggerService } from './services/logger.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,7 @@ import { ProductFormComponent } from './product-form/product-form.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ProductsService, LoggerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
