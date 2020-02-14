@@ -1,0 +1,11 @@
+<h5 class="text-success">Customers (Subscriber 2)</h5>
+<table class="table table-bordered">
+  <tr>
+    <th class="text-center">Name</th>
+    <th class="text-center">Email</th>
+  </tr>
+  <tr *ngFor="let customer of customers">
+    <td>{{customer.name}}</td>
+    <td>{{customer.email}}</td>
+  </tr>
+</table>

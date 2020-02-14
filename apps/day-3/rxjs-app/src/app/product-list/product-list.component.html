@@ -1,0 +1,11 @@
+<h5 class="text-info">Products (Subscriber 2)</h5>
+<table class="table table-bordered">
+  <tr>
+    <th class="text-center">Name</th>
+    <th class="text-center">Price</th>
+  </tr>
+  <tr *ngFor="let product of products">
+    <td>{{product.name}}</td>
+    <td class="text-right">{{product.price | currency:'INR'}}</td>
+  </tr>
+</table>

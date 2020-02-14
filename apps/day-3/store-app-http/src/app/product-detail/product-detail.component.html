@@ -1,0 +1,42 @@
+<h3>Product Details</h3>
+<hr>
+<a routerLink="/products" class="btn btn-primary">
+  Back
+</a>
+<br>
+<br>
+<div class="card mb-3 border-primary">
+  <div class="card-header">
+    <h3>
+      {{ product.name | uppercase }}
+    </h3>
+  </div>
+
+  <div class="card-body">
+    <p class="card-text" [ngStyle]="{ color: product.isAvailable ? 'blue' : 'red' }">
+      <!-- <p [style.color]="product.isAvailable ? 'blue' : 'red'"> -->
+      {{ product.description }}
+    </p>
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <!-- <span class="label" [ngClass]="{ 'label-primary': product.isAvailable, 'label-warning': !product.isAvailable }"> -->
+        <span class="label" [class.label-primary]="product.isAvailable" [class.label-warning]="!product.isAvailable">
+          {{ product.isAvailable ? "Available" : "Not Available" }}
+        </span>
+      </li>
+      <li class="list-group-item">
+        {{ product.price | currency:'INR' }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="card-footer">
+    <a [routerLink]="['/products', product.id, 'edit']" class="btn btn-primary btn-sm mr-2">
+      Edit
+    </a>
+    <a class="btn btn-warning btn-sm" (click)="onDelete()">
+      Delete
+    </a>
+  </div>
+</div>

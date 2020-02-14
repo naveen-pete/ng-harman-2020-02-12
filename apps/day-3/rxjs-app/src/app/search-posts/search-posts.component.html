@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col">
+    <div class="card bg-light mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Search Posts</h5>
+        <p class="card-text">(map, debounceTime, distinctUntilChanged, filter, switchMap)</p>
+        <p class="card-text">
+          <input type="text" class="form-control" placeholder="enter search text..." #search>
+        </p>
+      </div>
+    </div>
+
+    <div *ngIf="posts.length > 0">
+      <h5>Search Result</h5>
+      <div class="card mb-2" *ngFor="let post of posts">
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">{{ post.body }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
