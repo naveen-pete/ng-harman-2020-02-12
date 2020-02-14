@@ -1,0 +1,8 @@
+<p>
+  <button class="btn btn-success" (click)="onAdd()">Add</button>
+</p>
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action" *ngFor="let customer of customers">
+    {{ customer.name }}
+  </a>
+</div>

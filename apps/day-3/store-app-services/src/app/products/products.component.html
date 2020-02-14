@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-4">
+    <app-product-form (productCreated)="onProductCreated($event)"></app-product-form>
+  </div>
+
+  <div class="col">
+    <h3>Products</h3>
+    <app-product-detail [product]="p" *ngFor="let p of products"></app-product-detail>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<h4 class="text-success">Customer Details</h4>
+<div class="card mb-3 border-success">
+  <div class="card-header">
+    <h3>{{ customer.name }}</h3>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Phone: {{ customer.phone }}</li>
+    <li class="list-group-item">Email: {{ customer.email }}</li>
+    <li class="list-group-item">City: {{ customer.city }}</li>
+  </ul>
+</div>
+<p>
+  <button class="btn btn-success mr-2" (click)="onEdit()">Edit</button>
+  <button class="btn btn-success" (click)="onDelete()">Delete</button>
+</p>
