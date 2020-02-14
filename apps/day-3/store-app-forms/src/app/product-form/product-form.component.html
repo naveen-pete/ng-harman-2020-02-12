@@ -1,0 +1,50 @@
+<h3 class="productsColor">Product Form</h3>
+<h4 class="productsColor">Template Driven Form</h4>
+<div class="card bg-light">
+  <div class="card-body">
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
+      <div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name" [ngModel]="productName" required #name="ngModel"
+            minlength="3">
+          <div class="alert alert-warning" role="alert" *ngIf="name.touched && name.invalid">
+            <div *ngIf="name.errors.required">
+              Name is required
+            </div>
+            <div *ngIf="name.errors.minlength">
+              Name should contain at least 3 characters
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea class="form-control" cols="30" rows="4" id="description" name="description" ngModel required
+            #description="ngModel"></textarea>
+          <div class="alert alert-warning" role="alert" *ngIf="description.touched && description.invalid">
+            Description is required
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" id="price" name="price" ngModel required #price="ngModel">
+        <div class="alert alert-warning" role="alert" *ngIf="price.touched && price.invalid">
+          Price is required
+        </div>
+
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" id="isAvailable" name="isAvailable" value="true" ngModel> Available
+        </label>
+      </div>
+      <button [disabled]="f.invalid" name="save" type="submit" class="btn btn-primary">
+        Save
+      </button>
+    </form>
+  </div>
+</div>
+<div class="alert alert-success" *ngIf="showMessage">
+  Product saved successfully!
+</div>

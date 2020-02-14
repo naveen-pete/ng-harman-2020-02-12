@@ -1,0 +1,65 @@
+<h3 class="customersColor">Customer Form</h3>
+<h4 class="customersColor">Reactive Form</h4>
+
+<div class="card bg-light">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+      <div class="form-group">
+        <label for="customerName">Name</label>
+        <input type="text" class="form-control" id="customerName" name="customerName" formControlName="name">
+        <div class="alert alert-info" *ngIf="name.pending">
+          Checking for duplicate name. Please wait...
+        </div>
+        <div class="alert alert-warning" *ngIf="name.touched && name.invalid">
+          <div *ngIf="name.errors.required">
+            Name is required
+          </div>
+          <div *ngIf="name.errors.minlength">
+            Name should contain at least 3 characters
+          </div>
+          <div *ngIf="name.errors.cannotContainSpace">
+            Name cannot contain spaces
+          </div>
+          <div *ngIf="name.errors.shouldBeUnique">
+            Name cannot be duplicate
+          </div>
+        </div>
+      </div>
+      <div formGroupName="contact">
+        <div class="form-group">
+          <label for="customerPhone">Phone</label>
+          <input type="text" class="form-control" id="customerPhone" name="customerPhone" formControlName="phone">
+          <div class="alert alert-warning" *ngIf="phone.touched && phone.invalid">
+            Phone is required
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="customerEmail">Email</label>
+          <input type="text" class="form-control" id="customerEmail" name="customerEmail" formControlName="email">
+          <div class="alert alert-warning" *ngIf="email.touched && email.invalid">
+            <div *ngIf="email.errors.required">
+              Email is required
+            </div>
+            <div *ngIf="email.errors.email">
+              Email is not valid
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="customerCity">City</label>
+        <input type="text" class="form-control" id="customerCity" name="customerCity" formControlName="city">
+        <div class="alert alert-warning" *ngIf="city.touched && city.invalid">
+          City is required
+        </div>
+      </div>
+      <button name="save" type="submit" class="btn btn-success" [disabled]="form.invalid">
+        Save
+      </button>
+    </form>
+  </div>
+</div>
+<div class="alert alert-success" *ngIf="showMessage">
+  Customer saved successfully!
+</div>
